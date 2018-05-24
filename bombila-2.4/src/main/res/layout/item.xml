@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/tvOrderAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#0099cc" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:baselineAligned="false">
+
+        <TextView
+            android:id="@+id/tvOrderDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distance"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/tvOrderTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/tvOrderDistance"
+            android:layout_toRightOf="@+id/tvOrderDistance"
+            android:text="Time"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ffcc0000" />
+
+        <TextView
+            android:id="@+id/tvOrderPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="Price"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ff99cc00" />
+
+        <TextView
+            android:id="@+id/tvOrderBochka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tvOrderPrice"
+            android:layout_toStartOf="@+id/tvOrderPrice"
+            android:text="[Б]"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#fcdf01" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvOrderRoute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="=>route1=>route2"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Taxoid.iml" filepath="$PROJECT_DIR$/../Taxoid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../admin/admin.iml" filepath="$PROJECT_DIR$/../admin/admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../app/app.iml" filepath="$PROJECT_DIR$/../app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bombila.iml" filepath="$PROJECT_DIR$/bombila.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../daemon/daemon.iml" filepath="$PROJECT_DIR$/../daemon/daemon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ontaxi/ontaxi.iml" filepath="$PROJECT_DIR$/../ontaxi/ontaxi.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Данные из чека"
+        android:id="@+id/tvDataCheck"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Дата: "
+        android:id="@+id/tvDate"
+        android:paddingLeft="5dp"
+        android:paddingTop="10dp"
+        android:onClick="setDate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Время: "
+        android:id="@+id/tvTime"
+        android:paddingLeft="5dp"
+        android:paddingTop="10dp"
+        android:onClick="setTime" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editCard"
+        android:layout_gravity="center_horizontal"
+        android:maxLines="1"
+        android:hint="Номер карты"
+        android:inputType="number" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editCost"
+        android:layout_gravity="center_horizontal"
+        android:hint="Сумма оплаты"
+        android:inputType="number"  />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Отправить"
+        android:id="@+id/button"
+        android:layout_gravity="center_horizontal"
+        android:onClick="toSend" />
+
+</LinearLayout>
