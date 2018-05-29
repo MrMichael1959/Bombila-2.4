@@ -1065,14 +1065,22 @@ public class OnLineActivity extends AppCompatActivity implements OnClickListener
 //                String _end_address = addrs.getString(addrs.length()-1);
                     double _end_latitude = ltlns.getJSONArray(ltlns.length()-1).getDouble(0);
                     double _end_longitude = ltlns.getJSONArray(ltlns.length()-1).getDouble(1);
-                    for (int j=0; j<dirRadiuses.length(); j++) {
-                        double dir_latitude = dirCoords.getJSONArray(j).getDouble(0);
-                        double dir_longitude = dirCoords.getJSONArray(j).getDouble(1);
-                        d = __getDistance(_end_latitude, _end_longitude, dir_latitude, dir_longitude);
-                        if (d > dirRadiuses.getDouble(j)) continue;
-                        break;
+                    int len = dirRadiuses.length();
+                    boolean b = false;
+                    if (len > 0) {
+                        for (int j = 0; j < len; j++) {
+                            double dir_latitude = dirCoords.getJSONArray(j).getDouble(0);
+                            double dir_longitude = dirCoords.getJSONArray(j).getDouble(1);
+                            d = __getDistance(_end_latitude, _end_longitude, dir_latitude, dir_longitude);
+                            if (d <= dirRadiuses.getDouble(j)) {
+                                b = __accept(arr_id.getLong(i));
+                                if (b) break;
+                            }
+                        }
+                    } else {
+                        b = __accept(arr_id.getLong(i));
+                        if (b) break;
                     }
-                    boolean b = __accept(arr_id.getLong(i));
                     if (b) break;
                 }
 
