@@ -91,11 +91,13 @@ public class OnLineActivity extends AppCompatActivity implements OnClickListener
     String os = "android";
     String android = "6.0.1";
     String number = "";
-    int version = 17;
-    String version_name = "2.5.1";
+    int version = 19;
+    String version_name = "2.5.2";
     String model = "";
     String imei = "";
     String mac = "";
+    String KHA = "KHA";
+    String push_endpoint = "fAv3APQqltU:APA91bEaACU4jna9gJ4XRSs4VGPLXZyuWsTWWf39Gw-18ztnjPLjNOijdbBPS8OCarx-hwtRAqq_XdfROD8BDRJ8LLTHUHhPCezqRFIYTa9P1LmmkIacMiu-wy97ndfgzGL2U1T628skqPhquXoG1nmHSO54-1Q_zA";
 
     boolean __clickBtnCancel = false;
     boolean __clickBtnOnPlace = false;
@@ -664,7 +666,7 @@ public class OnLineActivity extends AppCompatActivity implements OnClickListener
         Socket socket = null;
         //        String server_IP = "94.27.63.94";
         int server_Port = 11000;
-        //        String server_IP = "77.222.143.10";
+//        String server_IP = "77.222.143.10";
         String server_IP = "94.153.161.234";
 //        int server_Port = 10000;
 
@@ -1398,6 +1400,8 @@ closeSocket();
                 obj.put("number", number);
                 obj.put("version", version);
                 obj.put("version_name", version_name);
+                obj.put("push_endpoint", push_endpoint);
+                obj.put("city", KHA);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
