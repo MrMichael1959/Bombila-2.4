@@ -91,13 +91,13 @@ public class OnLineActivity extends AppCompatActivity implements OnClickListener
     String os = "android";
     String android = "6.0.1";
     String number = "";
-    int version = 19;
-    String version_name = "2.5.2";
+    int version = 23;
+    String version_name = "2.5.3";
     String model = "";
     String imei = "";
     String mac = "";
     String KHA = "KHA";
-    String push_endpoint = "fAv3APQqltU:APA91bEaACU4jna9gJ4XRSs4VGPLXZyuWsTWWf39Gw-18ztnjPLjNOijdbBPS8OCarx-hwtRAqq_XdfROD8BDRJ8LLTHUHhPCezqRFIYTa9P1LmmkIacMiu-wy97ndfgzGL2U1T628skqPhquXoG1nmHSO54-1Q_zA";
+    String push_endpoint = "dVK-cQuQrOc:APA91bHotQ2l8WVHVWBFGBPHxO-ffJiSVkB-LUTAMUeXSKN0vvBfjHA1LCee4ZJHgLHCA8hlNriR4NL45u8XoaSiC6-lTNUq2TgZwCu8cl0n0U8wliMDqRUTO5sNcTm2KsIYte6JhZTb";
 
     boolean __clickBtnCancel = false;
     boolean __clickBtnOnPlace = false;
@@ -666,8 +666,8 @@ public class OnLineActivity extends AppCompatActivity implements OnClickListener
         Socket socket = null;
         //        String server_IP = "94.27.63.94";
         int server_Port = 11000;
-//        String server_IP = "77.222.143.10";
-        String server_IP = "94.153.161.234";
+        String server_IP = "77.222.143.10";
+//        String server_IP = "94.153.161.234";
 //        int server_Port = 10000;
 
         String count = "";
