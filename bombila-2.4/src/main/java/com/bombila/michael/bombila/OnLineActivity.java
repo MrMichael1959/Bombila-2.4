@@ -86,6 +86,9 @@ public class OnLineActivity extends AppCompatActivity implements OnClickListener
 
     int order_id = 0;
     int fmanid = 0;
+
+    String app_name = "";
+    String auth_action = "";
     String session = "";
     String ftaxi = "";
     String os = "android";
@@ -693,6 +696,7 @@ public class OnLineActivity extends AppCompatActivity implements OnClickListener
         @Override
         protected Void doInBackground(Void... values) {
 
+            getParams();
             init();
 //            initSocket();
             if (cb_my_location) { setMyLocation(); }
@@ -927,6 +931,9 @@ public class OnLineActivity extends AppCompatActivity implements OnClickListener
         protected void onProgressUpdate(String... values) {
             super.onProgressUpdate(values);
 
+            if(values[0].equals("set_app_name")) {
+                setTitle("Бомбила-" + version_name);
+            }
             if(values[0].equals("pbVisible")) {
                 __progressBar.setVisibility(View.VISIBLE);
             }
@@ -991,6 +998,26 @@ public class OnLineActivity extends AppCompatActivity implements OnClickListener
             super.onPostExecute(result);
         }
 
+//--------------------------------------------------------------------------------------------------
+    void getParams() {
+//--------------------------------------------------------------------------------------------------
+        String sparams = toScript(scripts_host + "get_params.php");
+        try {
+            JSONObject params = new JSONObject(sparams);
+            server_IP = params.getString("server");
+            server_Port = params.getInt("port");
+            app_name = params.getString("app_name");
+            auth_action = params.getString("action");
+            number = params.getString("number");
+            version = params.getInt("version");
+            version_name = params.getString("version_name");
+            push_endpoint = params.getString("push_endpoint");
+            KHA = params.getString("city");
+            publishProgress("set_app_name");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
 //--------------------------------------------------------------------------------------------------
         boolean __checkDriverInfo(){
 //--------------------------------------------------------------------------------------------------
@@ -1352,7 +1379,7 @@ closeSocket();
                     .format(new Date(l));
             return toScript(script, city, service, user, referer, s, bal, pay, ord_id, logs);
         }
-        void  init() {
+        void init() {
             toScript(scripts_host + "driver_info.php", driver_info, login, password);
 
             String script = scripts_host + "init.php";
